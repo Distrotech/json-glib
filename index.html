@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Json-glib by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Json-glib</h1>
+          <h2>Mirror of git://git.gnome.org/json-glib</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/json-glib/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/json-glib/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/json-glib" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="json-glib---a-json-parser-for-glib-based-libraries-and-applications" class="anchor" href="#json-glib---a-json-parser-for-glib-based-libraries-and-applications"><span class="octicon octicon-link"></span></a>JSON-GLib - A JSON parser for GLib-based libraries and applications</h1>
+
+<p>JSON-GLib implements a full JSON parser using GLib and GObject.</p>
+
+<p>Use JSON-GLib it is possible to parse and generate valid JSON data
+structures, using a DOM-like API. JSON-GLib also offers GObject
+integration, providing the ability to serialize and deserialize
+GObject instances to and from JSON data types.</p>
+
+<p>JSON is the JavaScript Object Notation; it can be used to represent
+objects and object hierarchies while retaining human-readability.</p>
+
+<p>GLib is a C library providing common and efficient data types for
+the C developers.</p>
+
+<p>GObject is a library providing a run-time Object Oriented type system
+for C developers. GLib and GObject are extensively used by the GTK+
+toolkit and by the GNOME project.</p>
+
+<p>For more information, see:</p>
+
+<ul>
+<li><a href="http://www.json.org" title="JSON">JSON</a></li>
+<li><a href="http://www.gtk.org" title="GTK+">GLib and GObject</a></li>
+</ul><h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>REQUIREMENTS</h2>
+
+<p>In order to build JSON-GLib you will need:</p>
+
+<ul>
+<li>pkg-config</li>
+<li>gtk-doc ≥ 1.13</li>
+<li>GLib, GIO ≥ 2.28</li>
+</ul><p>Optionally, JSON-GLib depends on:</p>
+
+<ul>
+<li>GObject-Introspection ≥ 0.9.5</li>
+<li>LCov ≥ 1.6</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>INSTALLATION</h2>
+
+<p>To build JSON-GLib just run:</p>
+
+<pre><code>$ ./configure
+$ make all
+# make install
+</code></pre>
+
+<h2>
+<a name="bugs" class="anchor" href="#bugs"><span class="octicon octicon-link"></span></a>BUGS</h2>
+
+<p>JSON-GLib tracks bugs in the GNOME Bugzilla.</p>
+
+<p>If you find a bug in JSON-GLib, please file a bug using
+[the appropriate form][bugzilla-enter].</p>
+
+<p>Required information:</p>
+
+<ul>
+<li>the version of JSON-GLib;</li>
+<li>if it is a development version, the branch of the git repository;</li>
+<li>the JSON data that produced the bug (if any);</li>
+<li>a small test case, if none of the test units exhibit the behaviour;</li>
+<li>in case of a segmentation fault, a full stack trace with debugging
+symbols obtained through gdb is greatly appreaciated.</li>
+</ul><h2>
+<a name="release-notes" class="anchor" href="#release-notes"><span class="octicon octicon-link"></span></a>RELEASE NOTES</h2>
+
+<ul>
+<li>Prior to JSON-GLib 0.10, a JsonSerializable implementation could
+automatically fall back to the default serialization code by simply
+returning NULL from an overridden JsonSerializable::serialize-property
+virtual function. Since JSON-GLib 0.10 this is not possible any more. A
+JsonSerializable is always expected to serialize and deserialize all
+properties. JSON-GLib provides public API for the default implementation
+in case the serialization code wants to fall back to that.</li>
+</ul><h2>
+<a name="hacking" class="anchor" href="#hacking"><span class="octicon octicon-link"></span></a>HACKING</h2>
+
+<p>JSON-GLib is developed mainly inside a GIT repository available at:</p>
+
+<pre><code>http://git.gnome.org/browse/json-glib
+</code></pre>
+
+<p>You can clone the GIT repository with:</p>
+
+<pre><code>git clone git://git.gnome.org/json-glib
+</code></pre>
+
+<p>If you want to contribute functionality or bug fixes to JSON-GLib you
+can either notify me to pull from your GIT repository or send me a set
+of patches using:</p>
+
+<pre><code>git format-patch master -k -s
+</code></pre>
+
+<p>or:</p>
+
+<pre><code>git send-email -k -s
+</code></pre>
+
+<p>Using <a href="http://blog.fishsoup.net/2008/11/16/git-bz-bugzilla-subcommand-for-git/">git-bz</a> is recommended.</p>
+
+<p>Make sure you always run the test suite when you are fixing bugs. New
+features should come with a test unit.</p>
+
+<h2>
+<a name="author-copyright-and-licensing" class="anchor" href="#author-copyright-and-licensing"><span class="octicon octicon-link"></span></a>AUTHOR, COPYRIGHT AND LICENSING</h2>
+
+<p>JSON-GLib has been written by Emmanuele Bassi</p>
+
+<p>JSON-GLib is released under the terms of the GNU Lesser General Public License,
+either version 2.1 or (at your option) any later version.</p>
+
+<p>See the file COPYING for details.</p>
+
+<p>Copyright (C) 2007, 2008  OpenedHand Ltd
+Copyright (C) 2009, 2010  Intel Corp.</p>
+        </section>
+
+        <footer>
+          Json-glib is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
