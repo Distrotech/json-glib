@@ -1,0 +1,16 @@
+*.o
+.gitignore
+/array
+/boxed
+/builder
+/generator
+/gvariant
+/invalid
+/node
+/object
+/parser
+/path
+/reader
+/serialize-simple
+/serialize-complex
+/serialize-full
